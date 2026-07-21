@@ -101,6 +101,40 @@ To make the dataset explorable for non-technical stakeholders, the cleaned datas
 
 ---
 
+## 🚀 Deployment — Interactive Web App
+
+The best-performing model (TF-IDF + Logistic Regression) is served through a **Streamlit** web application, letting a user enter a review and instantly get a recommendation prediction with a confidence score.
+
+**App features:**
+- Live prediction from raw review text + customer/product metadata (age, rating, positive feedback count, division/department/class)
+- Full preprocessing pipeline (cleaning → TF-IDF → scaling → one-hot encoding) reproduced at inference time
+- Confidence score and processed-text preview for transparency
+- Custom, polished UI/UX design (branded hero section, metrics sidebar, styled result cards)
+
+### Running the app locally
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Jana-elsawy/CustomerReview_Sentiment_Analysis.git 
+cd
+
+# 2. Install dependencies
+pip install -r requirements.txt
+
+# 3. Run the app
+python -m streamlit run app.py
+```
+
+The app will open automatically in your browser at `http://localhost:8501`.
+
+> 🔗 **Live demo:** not yet deployed publicly — currently run locally via Streamlit. Once hosted (e.g. on [Streamlit Community Cloud](https://streamlit.io/cloud)), the live link will be added here.
+
+---
+
+
+---
+
+
 ## Tech Stack
 
 - **Language**: Python (Jupyter/Colab)
@@ -108,24 +142,43 @@ To make the dataset explorable for non-technical stakeholders, the cleaned datas
 - **ML**: scikit-learn, XGBoost
 - **Interpretability**: SHAP, LIME, scikit-learn permutation importance
 - **Visualization**: Matplotlib, Seaborn, WordCloud
+- **Business Intelligence**: Power BI
+- **Deployment**: Streamlit
 
-## Repository Structure
+## 📁 Repository Structure
 
 ```
 ├── final_Project_ITI.ipynb        # Full notebook: cleaning → modeling → clustering → XAI
 ├── Womens_Clothing_Reviews.csv    # Raw dataset
-├── report.pdf / report.docx       # 2–4 page written report
+├── app.py                         # Streamlit web application
+├── artifacts/                     # Saved model, vectorizer, scaler, encoder for deployment
+├── powerbi/                       # Power BI (.pbix) dashboard file
 ├── presentation.pptx              # Slide deck
+├── requirements.txt                # Python dependencies
 └── README.md
 ```
 
-## How to Run
+## ▶️ How to Run
 
-1. Open the notebook in Google Colab or Jupyter
+### Notebook (model training & analysis)
+1. Open `final_Project_ITI.ipynb` in Google Colab or Jupyter
 2. Install dependencies: `pip install sentence-transformers xgboost shap lime wordcloud nltk`
 3. Run cells top to bottom (`Runtime → Run all` in Colab)
 4. Outputs (models, plots, cluster assignments) generate inline
 
-## Authors
+### Web App (live prediction)
+1. `pip install -r requirements.txt`
+2. `python -m streamlit run app.py`
+3. Open the local URL shown in the terminal (default: `http://localhost:8501`)
 
-[Add team member names here]
+### Power BI Dashboard
+1. Open `powerbi/<file>.pbix` in Power BI Desktop
+2. Refresh the data source if prompted (points to the cleaned dataset)
+
+---
+
+## 👥 Authors
+
+- Demiana Morice
+- Mariem Hamdy
+- Jana ElSawy
