@@ -83,6 +83,20 @@ Hyperparameters tuned via `RandomizedSearchCV` (scored on F1 to account for imba
 - Adding structured metadata (rating, age, category) to text embeddings improved minority-class F1 substantially over an embeddings-only baseline
 - Six distinct complaint/review themes emerge from clustering, with clearly different recommendation rates across clusters
 
+- ##📈 Power BI Dashboard
+
+To make the dataset explorable for non-technical stakeholders, the cleaned dataset was also modeled and visualized in Power BI, turning the raw review data into a business-facing analytics dashboard.
+<img width="1600" height="822" alt="WhatsApp Image 2026-07-19 at 7 42 51 PM" src="https://github.com/user-attachments/assets/7b122f85-3315-48af-9add-e8181128b4fd" />
+
+What the dashboard covers:
+
+KPI cards — total review count (22.6K), average customer age (43.28), and average rating (4.18) at a glance
+Sum of Rating by Rating — distribution showing ratings are heavily skewed toward 4★ and 5★
+Recommended IND breakdown — a donut chart confirming the ~82%/18% class split (81.88% recommended)
+Category breakdown table — ratings, age, and recommendation counts sliced by Class Name and Department Name, with Dresses and Knits/Tops driving the largest share of reviews
+Average Rating by Department Name — comparative bar view across Bottoms, Intimate, Jackets, and Tops
+Sum of Rating by Positive Feedback Count — a donut chart showing how "helpfulness" votes are distributed across reviews
+
 ## Tech Stack
 
 - **Language**: Python (Jupyter/Colab)
