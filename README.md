@@ -181,4 +181,4 @@ The app will open automatically in your browser at `http://localhost:8501`.
 
 - Demiana Morice
 - Mariem Hamdy
-- Jana ElSawy
+- Jana Elsawy
